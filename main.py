@@ -90,7 +90,7 @@ async def _(client: pyrogram.client.Client,
         try:
             await client.answer_inline_query(query.id,
                                              results=resp_list,
-                                             cache_time=0,  # 900 15 minutes cache
+                                             cache_time=900,  # 15 minutes cache
                                              next_offset=next_offset,
                                              is_gallery=True)
         except QueryIdInvalid:
